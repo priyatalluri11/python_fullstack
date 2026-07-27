@@ -23,8 +23,6 @@ nav{
     margin: 20px;
 }
 nav a{
-
-   
     color: aliceblue;
     margin: 15px ;
     font-weight: bold;
@@ -54,13 +52,26 @@ section{
 h2{
     margin-bottom: 20px;
     color: rgb(230, 46, 153);
-
 }
 p{
     margin-bottom: 15px;
 }
 .banner{
-    width:100px;
+    width:50%;
     height: 300px;
     margin-bottom: 30px;
+}
+ul{
+    padding-left: 20px;
+}
+li{
+    margin-bottom: 10px;
+}
+artical{
+    border-radius: 10px;
+    border: 1px solid #ccc;
+    padding: 15px;
+}
+artical:hover{
+    background-color: aliceblue;
 }
