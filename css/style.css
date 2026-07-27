@@ -1,0 +1,66 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Times New Roman', Times, serif;
+    background-color: rgb(218, 211, 235);
+    color: rgb(3, 0, 10);
+    line-height: 1.6;
+
+}
+header{
+    background-color: brown;
+    color: antiquewhite;
+    padding: 30px;
+    text-align: center;
+}
+hr{
+    margin:20px 0;
+}
+nav{
+    margin: 20px;
+}
+nav a{
+
+   
+    color: aliceblue;
+    margin: 15px ;
+    font-weight: bold;
+    padding: 10px;
+    text-align: center;
+}
+nav a{
+    padding: 10px;
+    text-align: center;
+}
+nav a:hover{
+    background-color: antiquewhite;
+    color: aqua;
+    border-radius: 5px;
+}
+main{
+    margin:auto;
+    width: 90%;
+    margin-top: 50px;
+}
+section{
+    margin-bottom: 30px;
+    background-color: aliceblue;
+    padding: 20px;
+    border-radius: 20px;
+}
+h2{
+    margin-bottom: 20px;
+    color: rgb(230, 46, 153);
+
+}
+p{
+    margin-bottom: 15px;
+}
+.banner{
+    width:100px;
+    height: 300px;
+    margin-bottom: 30px;
+}
