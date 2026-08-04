@@ -3,7 +3,7 @@ html _ hyper text markup language--structure or we page css-cascading trasfer--h
 
 
 git add .
-git commit -m "html" done
+git commit -m "html" 
 git push
 git add .
 git commit -m "portfolio"

@@ -10,17 +10,21 @@
 
 <body>
     <header>Register</header>
-    <form id="registerForm"
+    <form id="registerForm "
     <main>
 @@ -14,7 +16,7 @@ <h2>Student Registration </h2>
-            <input type="text" placeholder="Enter Your Name" id="name" ><br>
+            <form id="registerForm"method="POST"></form>
+            <input type="text" placeholder="Enter Your Name" id="name" name="name" ><br>
             <label>Email</label><br>
-            <input type="email" placeholder="Enter your email" id = email><br>
+            <input type="email" placeholder="Enter your email" id = email name="email"><br>
             <label >Password</label><br>
             <label>Password</label><br>
-            <input type="password" placeholder="Enter Your Password" id="password"><br>
+            <input type="password" placeholder="Enter Your Password" id="password" name="password"><br>
             <label>Date of Birth</label><br>
-            <input type="date" placeholder="DOB"><br>
+            <input type="date" placeholder="DOB" name="DOB"><br>
+            <label>Gender</label><br>
+            <input type="radio" name="gender" name="gender" value="male">Male 
+            <input type="radio" name="gender" name="gender" value="female">Feale 
 @@ -24,11 +26,12 @@ <h2>Student Registration </h2>
             <label>Select Course</label>
             <br>
@@ -32,7 +36,7 @@
             </select>
         </form>
     </main>
-    <script src="js./script.js"></script>
+    <script src="{{url_for{'satatic',filename='js/script.js'}}}"></script>
 
 </body>
 
