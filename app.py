@@ -4,20 +4,28 @@ app = Flask(__name__)
 @app.route('/')
 def home():
     return render_template("index.html")
-@app.route("/about")
+@app.route('/about')
 def about():
     return render_template("about.html")
-@app.route("/courses")
+@app.route('/courses')
 def courses():
     return render_template("courses.html")
 
-@app.route("/trainers")
+@app.route('/trainers')
 def trainers():
     return render_template("trainers.html")
-@app.route("/login")
+@app.route('/login',methods=["POST","GET"])
 def login():
+    if request.methods=="POST":
+        name=request.form["login.name"]
+        email=request.form["login.email"]
+        password=request.form["login.password"]
+        dob=request.form["login.dob"]
+        gender=request.form["login.gender"]
+        course=request.form["login.course"]
+
     return render_template("login.html")
-@app.route('/register',METHOD=["POST","GET"])
+@app.route('/register',methods=["POST","GET"])
 def register():
     if request.method=="POST":
         name=request.form["name"]
@@ -27,6 +35,25 @@ def register():
         gender=request.form["gender"]
         course=request.form["course"]
         return render_template("register.html")
+@app.route('/api/register',methods=["POST"])
+def api_register():
+    data = request.get_json()
+    email = data.get("email")
+    if email in user_db:
+        return jsonify[{"status":"error","message":"user already exits with this email"}], 400
+        users_db["email"]=data
+        return jsonify({"status":success,"message":"Registration succsessfull"})
+@app.route('/api/login',methods=["POST"])
+def api_login():
+    data = request.get_json()
+    email = data.get("email")
+    password= data.get("password")
+    user = user_db.get(email)
+    if user and user.get("password") == password:
+        return jsonify({"status":"succsess","message":"Login succsessful ! welcom back."})
+    else:
+        
+        return jsonify({"status":"error","message":"invalid email or password!"}), 401
 
 if __name__=='__main__':
     app.run(debug=True)

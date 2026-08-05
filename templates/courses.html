@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="{{url_for('satatic',filename='css/script.css')}}">
     <title>Course page</title>
   </head>
   <body>
@@ -79,9 +79,9 @@
         <th>Mode</th>
       </tr>
       <tr>
-        <td>Python FullStack</td>
-        <td>6 Months</td>
-        <td>Offline</td>
+        <td id="courseName">Python FullStack</td>
+        <td id="courseDuration">6 Months</td>
+        <td id="courseMode">Offline</td>
       </tr>
     </table>
     <section>
@@ -114,7 +114,8 @@
     <a href="#">LinkedIn</a>
 
   </footer>
-  <script src="{{url_for{'satatic',filename='js/script.js'}}}"></script>
+ <script src="{{url_for('static',filename='js/script.js')}}"></script>
+
 </body>
 
 </html>
