@@ -16,7 +16,7 @@ def trainers():
     return render_template("trainers.html")
 @app.route('/login',methods=["POST","GET"])
 def login():
-    if request.methods=="POST":
+   if request.method == "POST":
         name=request.form["login.name"]
         email=request.form["login.email"]
         password=request.form["login.password"]
